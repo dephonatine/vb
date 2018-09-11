@@ -40,6 +40,8 @@ void hgcm_connect(char *service) {
 	strncpy(conn->svc, service, 127);
 	conn->type = 2; 
 	int rc = vbox_ioctl(IOCTL_HGCM_CONNECT, (void *)conn, 4);
+	if (rc < 0)
+		THROW_ERROR(errno);
 }
 
 
