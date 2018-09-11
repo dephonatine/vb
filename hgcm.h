@@ -1,9 +1,13 @@
-/* 	R3 HGCM IOCTLS */
 #include <stdbool.h>
 #define		IOCTL_HGCM_CONNECT		4
 #define		IOCTL_HGCM_DISCONNECT	5
 #define		IOCTL_HGCM_CALL32		6
 #define		IOCTL_HGCM_CALL64		7
+
+#define		VMMDevHGCMParmType_32bit  		1
+#define		VMMDevHGCMParmType_64bit 		2
+#define		VMMDevHGCMParmType_LinAddr  	4
+#define		VMMDevHGCMParmType_PageList 	10
 
 #define		VBOX_USER_DEV			"/dev/vboxuser"
 #define		VBOX_GUEST_DEV			"/dev/vboxguest" /* Note: Can only be opened by root */
